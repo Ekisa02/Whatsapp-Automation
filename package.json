@@ -1,0 +1,16 @@
+{
+  "name": "dr-huxtable-whatsapp-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WhatsApp Cloud API + Gemini AI receptionist starter",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr Huxtable | Assistant Console</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header><div><p class="eyebrow">WHATSAPP AUTOMATION</p><h1>Dr Huxtable Assistant</h1><p class="muted">Manage availability, AI replies and client conversations.</p></div><span class="status" id="connection">Not connected</span></header>
+    <section class="panel login" id="loginPanel">
+      <h2>Admin access</h2><label>Admin password<input id="password" type="password" placeholder="Enter dashboard password"></label>
+      <button id="connect">Open dashboard</button><p class="hint">Set ADMIN_PASSWORD in your .env file before using this console.</p>
+    </section>
+    <section id="dashboard" hidden>
+      <div class="grid">
+        <section class="panel">
+          <h2>Availability</h2>
+          <label>Current mode<select id="availability"><option value="available">Available</option><option value="busy">Busy</option><option value="unavailable">Unavailable</option></select></label>
+          <label class="toggle"><input id="aiEnabled" type="checkbox"> Enable AI replies</label>
+          <label class="toggle"><input id="humanTakeover" type="checkbox"> Human takeover (pause bot)</label>
+          <label>Business name<input id="businessName"></label>
+        </section>
+        <section class="panel">
+          <h2>Automatic messages</h2>
+          <label>Greeting message<textarea id="greeting" rows="3"></textarea></label>
+          <label>Away message<textarea id="awayMessage" rows="4"></textarea></label>
+          <label>Human handover message<textarea id="handoverMessage" rows="3"></textarea></label>
+        </section>
+      </div>
+      <section class="panel">
+        <h2>AI instructions and business knowledge</h2>
+        <label>AI personality / instructions<textarea id="systemPrompt" rows="4"></textarea></label>
+        <label>Business facts, services, hours, prices and appointment rules<textarea id="knowledgeBase" rows="7"></textarea></label>
+        <button id="save">Save settings</button><span id="saved" class="hint"></span>
+      </section>
+      <section class="panel"><div class="section-head"><h2>Recent message activity</h2><button class="secondary" id="refresh">Refresh</button></div><div id="messages" class="messages">No messages loaded.</div></section>
+    </section>
+    <footer>Starter build · Official WhatsApp Cloud API · Gemini AI</footer>
+  </main>
+  <script src="/app.js"></script>
+</body></html>
